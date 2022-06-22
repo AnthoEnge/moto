@@ -7,6 +7,7 @@ body {
     background: #060507;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 header {
@@ -21,42 +22,42 @@ header {
     position: relative;
 
     .logo {
-        width: 285px;
+        width: 15vw;
         height: 45px;
         margin: 54px 104px 64px 64px;
     }
-
-    ul {
+    
+    nav {
+        width: 60vw;
         display: flex;
-        gap: 72px;
-        list-style: none;
-        text-transform: uppercase;
-        position: relative;
-        top: -7px;
-        font-family: 'Druk Wide';
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 183%;
-        /* or 26px */
-        display: flex;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
-
-        color: #FFFFFF;
-
-
+        ul {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            text-transform: uppercase;
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            color: #FFFFFF;
+        }
+        li {
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+        li:hover {
+            color: #F7E6B1;
+        }
     }
+
     .img {
         // position: absolute;
         // right: 0;
-        width: 575px;
-        height: 562px;
-        img {
-            object-fit: cover;
-            height: 100%;
-            width: 100%;
-        }
+        height: 35vh;
     }
 }
 
@@ -64,17 +65,21 @@ header {
     position: relative;
     display: flex;
     // width: 1389px;
-    width: 1550px;
-    height: 500px;
+    width: 80vw;
+    height: 55vh;
     background: #060507;
     overflow: hidden;
+    justify-content: space-around;
     .img1 {
         display: flex;
-        width: 100%;
         position: relative;
         h2 {
+            border-radius: 50%;
             position: absolute;
             color: #ffffff;
+            right: 0;
+            top: 50px;
+            font-family: 'Roboto', sans-serif;
         }
     }
     img {
@@ -90,29 +95,22 @@ header {
     }
 }
 
-.mainRight {
-    width: 353px;
-    height: 749px;
-    color: #ffffff;
-    .container {
-        width: 100%;
-    }
-}
-
 .mainBottom {
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 1550px;
+    width: 80vw;
     .content {
         height: 92px;
-        width: 933px;
+        width: 80vw;
         display: flex;
         flex-direction: row;
         .left {
             display: flex;
             align-items: center;
+            width: 50%;
+            font-family: 'Roboto', sans-serif;
             .barre {
                 position: relative;
                 height: 2px;
@@ -133,11 +131,18 @@ header {
             h2 {
                 margin: 0 40px;
                 span {
-                    margin: 0 20px;
+                    margin: 0 50px;
+                    cursor: pointer;
+                    width: auto;
+                    transition: color 0.3s;
+                }
+                span:hover {
+                    color: #A75B12;
                 }
             }
         }
         .center {
+            width: 40%;
             p {
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -147,9 +152,66 @@ header {
                 /* or 24px */
                 display: flex;
                 align-items: center;
-                color: #FFFFFF;
+                color: #ffffff;
             }
             
+        }
+        .right {
+            width: 20%;
+        }
+    }
+}
+
+.mainRight{
+    background: #060507;
+    width: 20vw;
+    height: 70vh;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    .left {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        h4 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            /* or 267% */
+            text-align: center;
+            color: #3F3E44;
+            transform: rotate(-90deg);
+        }
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        h4 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #b9b8b8;
+        }
+        h3 {
+            font-family: 'Druk Wide';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 32px;
+            line-height: 42px;
+            display: flex;
+            align-items: center;
+            color: #FFFFFF;
         }
     }
 }
