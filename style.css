@@ -5,6 +5,28 @@
           box-sizing: border-box;
 }
 
+@-webkit-keyframes rotateImg {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateImg {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 body {
   background: #060507;
   height: 100vh;
@@ -33,7 +55,7 @@ header {
 header .logo {
   width: 15vw;
   height: 45px;
-  margin: 54px 104px 64px 64px;
+  margin: 54px 54px 64px 64px;
 }
 
 header nav {
@@ -88,7 +110,7 @@ header .img {
   display: -ms-flexbox;
   display: flex;
   width: 80vw;
-  height: 55vh;
+  height: 60vh;
   background: #060507;
   overflow: hidden;
   -ms-flex-pack: distribute;
@@ -102,13 +124,18 @@ header .img {
   position: relative;
 }
 
-.main .img1 h2 {
-  border-radius: 50%;
-  position: absolute;
+.main .img1 #abso {
   color: #ffffff;
-  right: 0;
-  top: 50px;
+  position: absolute;
+  right: -50px;
+  height: auto;
+  width: 170px;
+  top: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
   font-family: 'Roboto', sans-serif;
+  -webkit-animation: rotateImg  infinite 35s;
+          animation: rotateImg  infinite 35s;
 }
 
 .main img {
@@ -145,10 +172,6 @@ header .img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .mainBottom .content .left {
@@ -158,25 +181,25 @@ header .img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: 'Roboto', sans-serif;
 }
 
 .mainBottom .content .left .barre {
   position: relative;
   height: 2px;
-  width: 140px;
+  width: 10vw;
   background: #A75B12;
   z-index: 2;
 }
 
 .mainBottom .content .left .barre:after {
   content: '';
-  position: absolute;
-  right: 0;
   display: block;
   height: 2px;
-  width: 86px;
+  width: 5vw;
   background: #ffffff;
   z-index: 1;
 }
@@ -199,6 +222,7 @@ header .img {
 
 .mainBottom .content .center {
   width: 40%;
+  min-width: 220px;
 }
 
 .mainBottom .content .center p {

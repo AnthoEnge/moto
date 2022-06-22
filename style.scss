@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+@keyframes rotateImg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 body {
     background: #060507;
     height: 100vh;
@@ -24,14 +32,15 @@ header {
     .logo {
         width: 15vw;
         height: 45px;
-        margin: 54px 104px 64px 64px;
+        margin: 54px 54px 64px 64px;
     }
-    
+
     nav {
         width: 60vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         ul {
             width: 100%;
             display: flex;
@@ -45,10 +54,12 @@ header {
             font-size: 14px;
             color: #FFFFFF;
         }
+
         li {
             cursor: pointer;
             transition: color 0.3s;
         }
+
         li:hover {
             color: #F7E6B1;
         }
@@ -66,26 +77,33 @@ header {
     display: flex;
     // width: 1389px;
     width: 80vw;
-    height: 55vh;
+    height: 60vh;
     background: #060507;
     overflow: hidden;
     justify-content: space-around;
+
     .img1 {
         display: flex;
         position: relative;
-        h2 {
-            border-radius: 50%;
-            position: absolute;
+
+        #abso {
             color: #ffffff;
-            right: 0;
-            top: 50px;
+            position: absolute;
+            right: -50px;
+            height: auto;
+            width: 170px;
+            top: 20px;
+            object-fit: cover;
             font-family: 'Roboto', sans-serif;
+            animation: rotateImg  infinite 35s;
         }
     }
+
     img {
         height: 100%;
         object-fit: cover;
     }
+
     img:nth-child(3) {
         position: absolute;
         bottom: 0;
@@ -105,44 +123,49 @@ header {
         height: 92px;
         width: 80vw;
         display: flex;
-        flex-direction: row;
+
+
         .left {
             display: flex;
             align-items: center;
-            width: 50%;
+            justify-content: center;
             font-family: 'Roboto', sans-serif;
             .barre {
                 position: relative;
                 height: 2px;
-                width: 140px;
+                width: 10vw;
                 background: #A75B12;
                 z-index: 2;
             }
+
             .barre:after {
                 content: '';
-                position: absolute;
-                right: 0;
                 display: block;
                 height: 2px;
-                width: 86px;
+                width: 5vw;
                 background: #ffffff;
                 z-index: 1;
             }
+
             h2 {
                 margin: 0 40px;
+
                 span {
                     margin: 0 50px;
                     cursor: pointer;
                     width: auto;
                     transition: color 0.3s;
                 }
+
                 span:hover {
                     color: #A75B12;
                 }
             }
         }
+
         .center {
             width: 40%;
+            min-width: 220px;
             p {
                 font-family: 'Montserrat';
                 font-style: normal;
@@ -153,8 +176,8 @@ header {
                 display: flex;
                 align-items: center;
                 color: #ffffff;
+
             }
-            
         }
         .right {
             width: 20%;
@@ -162,7 +185,7 @@ header {
     }
 }
 
-.mainRight{
+.mainRight {
     background: #060507;
     width: 20vw;
     height: 70vh;
@@ -170,6 +193,7 @@ header {
     right: 0;
     bottom: 0;
     display: flex;
+
     .left {
         width: 45%;
         height: 100%;
@@ -177,6 +201,7 @@ header {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
         h4 {
             font-family: 'Montserrat';
             font-style: normal;
@@ -188,11 +213,13 @@ header {
             transform: rotate(-90deg);
         }
     }
+
     .right {
         width: 100%;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
+
         h4 {
             font-family: 'Montserrat';
             font-style: normal;
@@ -203,6 +230,7 @@ header {
             text-transform: uppercase;
             color: #b9b8b8;
         }
+
         h3 {
             font-family: 'Druk Wide';
             font-style: normal;
